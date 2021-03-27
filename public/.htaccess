@@ -1,0 +1,10 @@
+<ifModule mod_rewrite.c>
+    Options -Multiviews
+    RewriteEngine On
+    #RewriteBase /hermano/mvc/pro1/public/
+    #RewriteCond %{REQUEST_FILENAME} !-d
+    #RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^(.+)$ index.php?url=$1  
+    #[QSA,L]
+</ifModule>
+
